@@ -4,19 +4,14 @@ import avatar from "./images/avatar.png"
 
 
 
-const Header = () => {
+const Header = ({ links }) => {
+  links = links || [];
+
   const [navToggled, setNavToggled] = useState(false);
 
   const navToggle = () => {
     setNavToggled(!navToggled);
   };
-
-  const links = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/fvelcic" },
-    { name: "YouTube", url: "https://www.youtube.com/channel/UC4J0UigOQrWDAXoLSNlWEIg" },
-    { name: "GitHub", url: "https://github.com/FernandoVelcic" },
-    { name: "Contact", url: "mailto:fvelcic@gmail.com" },
-  ];
 
   return (
     <nav class="flex items-center justify-between flex-wrap bg-black p-4">

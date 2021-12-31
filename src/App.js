@@ -1,6 +1,6 @@
 import Header from './Header';
-import Console from './Console'
-
+import Toolbar from './Toolbar';
+import Console from './Console';
 
 const links = [
   { name: "LinkedIn", url: "https://www.linkedin.com/in/fvelcic" },
@@ -33,6 +33,7 @@ const App = () => (
   <div class="flex flex-col h-screen">
     <Header links={links} />
     <div class="bg-manjaro bg-center pt-5 px-5 pb-16 sm:p-20 h-full">
+      <Toolbar title="Terminal" />
       <Console 
         descriptionToWrite={"Hello my name is Fernando Velcic\nWelcome to my page\n~ >>>\t"}
         commandHandler={commandHandler}

@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <nav class="flex items-center justify-between flex-wrap bg-black p-4">
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <div class="flex items-center flex-shrink-0 text-white mr-8">
         <img class="fill-current h-9 w-9 mr-4" src={avatar} alt="Logo" />
         <span class="font-semibold text-xl tracking-tight">Fernando Velcic</span>
       </div>
@@ -33,7 +33,7 @@ const Header = () => {
         <div class="text-sm lg:flex-grow">
           {
             links.map((link, index, array) => (
-            <a key={index} href={link.url} className={"block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white " + ((index < array.length - 1) ? "mr-4" : "")}>
+            <a key={index} href={link.url} className={"block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white " + ((index < array.length - 1) ? "mr-6" : "")}>
               {link.name}
             </a>))
           }

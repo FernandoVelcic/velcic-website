@@ -33,11 +33,14 @@ const Console = ({descriptionToWrite, commandHandler}) => {
   };
 
   const onChangeInput = (e) => {
-    if (isTyping()) return e.preventDefault(); 
+    if (isTyping()) return e.preventDefault();
+
     setInputValue(e.target.value);
   }
 
   const handleInput = (e) => {
+    if (isTyping()) return e.preventDefault();
+
     if (e.key === 'Enter') {
       const command = e.target.value;
 

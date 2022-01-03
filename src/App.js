@@ -30,7 +30,7 @@ const commandHandler = (command, stdout, setStdout) => {
 
 
 const App = () => (
-  <div class="flex flex-col h-screen">
+  <div class="flex flex-col absolute inset-0">
     <Header links={links} />
     <div class="bg-manjaro bg-center pt-5 px-5 pb-16 sm:p-20 h-full">
       <Toolbar title="Terminal" />

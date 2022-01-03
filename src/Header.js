@@ -14,7 +14,7 @@ const Header = ({ links }) => {
   };
 
   return (
-    <nav class="flex items-center justify-between flex-wrap bg-black p-4">
+    <nav class="flex shrink-0 items-center justify-between flex-wrap bg-black p-4">
       <div class="flex items-center flex-shrink-0 text-white mr-8">
         <img class="fill-current h-9 w-9 mr-4" src={avatar} alt="Logo" />
         <span class="font-semibold text-xl tracking-tight">Fernando Velcic</span>

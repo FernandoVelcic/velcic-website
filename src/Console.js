@@ -53,6 +53,7 @@ const Console = ({descriptionToWrite, commandHandler}) => {
 
   useEffect(() => {
     autoCompleteText();
+    inputRef.current.scrollIntoView();
   }, [stdout]);
 
   useEffect(() => {
@@ -66,7 +67,7 @@ const Console = ({descriptionToWrite, commandHandler}) => {
 
   return (
     <div class="flex justify-end flex-col text-center h-full bg-black opacity-90 cursor-text" onClick={focusInput}>
-      <div class="p-1 font-mono text-left text-white whitespace-pre-line overflow-y-scroll">
+      <div class="p-1 font-mono text-left text-white whitespace-pre-line overflow-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-100 scrollbar-track-gray-900">
         {stdout}
         <input
           type="text" name="input" autoComplete="off" autoFocus

@@ -9,22 +9,22 @@ const links = [
   { name: "Contact", url: "mailto:fvelcic@gmail.com" },
 ];
 
-const commandHandler = (command, stdout, setStdout) => {
+const commandHandler = (command, stdout) => {
   const sanitized_command = command.toLowerCase().trim();
 
-  const socialCommand = links.find((link) => sanitized_command == link.name.toLowerCase());
+  const socialCommand = links.find((link) => sanitized_command === link.name.toLowerCase());
   if (socialCommand) {
     var win = window.open(socialCommand.url, '_blank');
     win.focus();
-    return;
+    return stdout;
   }
 
   if (sanitized_command === "") {
-
+    return stdout;
   } else if (sanitized_command === "clear") {
-    setStdout("\n~ >>>\t");
+    return "";
   } else {
-    setStdout(stdout + "zsh: command not found: " + command + "\n~ >>>\t")
+    return stdout + "\n" + "sh: command not found: " + command;
   }
 }
 
